@@ -1,132 +1,141 @@
-/* TODO make desktop version */
 
 html {
-    background-color: #fff;
-    /* background-color: #f5f5f5; */
-    font-family: 'Roboto', sans-serif;
-  }
-  
+  background-color: #fff;
+  /* background-color: #f5f5f5; */
+  font-family: "Roboto", sans-serif;
+}
+
 html.dark {
   background-color: #0d0950;
   color: #fff;
 }
 
+.dark .nav-links a {
+  color: #fff;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  /* max-width: 80ch; */
+  /* padding: 1rem; */
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+a {
+  color: black;
+}
+
+.content {
+  width: 85%;
+  margin: 0 auto;
+}
 
 
+.nav-links {
+  width: 100%;
+  margin: 0;
+  margin-right: 0.8em;
+  text-align: right;
+}
+
+.nav-links a {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  /* font-family: 'Staatliches', sans-serif; */
+  text-align: center;
+ 
+  margin-left: 0.5em;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  position: relative;
+
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  display: block;
+  bottom: 4px;
+  left: 0;
+  background: currentColor;
+  background-color: black;
+  transition: width 0.3s ease;
+
   
-  .dark .nav-links a {
-    color: #fff;
-  }
-  
-  body {
-    margin: 0 auto;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
     width: 100%;
-    max-width: 80ch;
-    /* padding: 1rem; */
-    line-height: 1.5;
-  }
-  
-  * {
-    box-sizing: border-box;
+}
+
+.nav-links a[href][aria-current="page"] {
+  text-decoration: underline;
+}
+
+.nav-links a[href][aria-current="page"]::after {
+  width: 100%; /* Ensure the underline is visible */
+  height: 1px; /* Thicker underline for the current page */
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  /* background-color: #e5e5e5; */
+
+}
+
+.nav-links a:visited {
+  color: black;
+}
+
+.expanded {
+  display: unset;
+}
+
+button {
+  all: unset;
+  align-self: center;
+  margin-bottom: 1em;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-family: "Staatliches", sans-serif;
+  padding: 0.5em 0em;
+  width: 100%;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin-left: 5em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
   }
 
+  .nav-links a {
+    display: inline-block;
+    margin: 15px 20px;
 
-  h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
-  }
-
-  a {
-    color: black;
-  }
-
-  .content {
-    width: 85%;
-    margin: 0 auto;
   }
 
   .hamburger {
-    padding-right: 20px;
-    cursor: pointer;
+    display: none;
   }
-  
-  .hamburger .line {
-    display: block;
-    width: 40px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: #e5e5e5;
-  }
-
-
-  .nav-links {
-    width: 100%;
-    margin: 0;
-    margin-right: 0.8em;
-    text-align: right;
-  }
-  
-  .nav-links a {
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    /* font-family: 'Staatliches', sans-serif; */
-    text-align: center;
-    padding: 10px 0;
-    margin-left: 0.5em;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  .nav-links a[href][aria-current="page"] {
-		text-decoration: underline;
-	}
-
-  
-  .nav-links a:hover,
-  .nav-links a:focus {
-    background-color: #ff9776;
-  }
-
-  .nav-links a:visited {
-    color: black;
-  }
-  
-  .expanded {
-    display: unset;
-  }
-
-  
-  button {
-    all: unset;
-    align-self: center;
-    margin-bottom: 1em;
-          text-align: center;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    font-family: 'Staatliches', sans-serif;
-    padding: 0.5em 0em;
-          width: 100%;
-  }
-  
-  @media screen and (min-width: 636px) {
-    .nav-links {
-      margin-left: 5em;
-      display: block;
-      position: static;
-      width: auto;
-      background: none;
-    }
-  
-    .nav-links a {
-      display: inline-block;
-      padding: 15px 20px;
-    }
-
-    .hamburger {
-        display: none;
-      }
-  
-  }
+}

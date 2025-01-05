@@ -8,15 +8,21 @@ import svgindex from '../assets/Fast-Internet.svg';
 ---
 <!-- TODO compléter title -->
 <Layout>
-	<div id="title" class="content">
-		<h1>Hi, <br/> I'm Pierre</h1>
-		<p>Freelance Web Developper</p>
-		<button>Let's work together !</button>
+	<div class="content">
+		<div id="title">
+			<div>
+				<h1>Hi, <br/> I'm Pierre</h1>
+				<p>Freelance Web Developper</p>
+			</div>
+			<button>Let's work together !</button>
+		</div>
+		<Image src={svgindex} alt="Fast Internet" class="fullImage" />
 	</div>
-	<Image src={svgindex} alt="Fast Internet" class="fullImage" />
+
 </Layout>
 
 <style>
+	 
 	.fullImage {
 		display: block;
         margin: 0 auto;
@@ -32,6 +38,7 @@ import svgindex from '../assets/Fast-Internet.svg';
         flex-direction: column;
         align-items: flex-start; /* Align children to the left */
         text-align: left;
+		line-height: 1;
 
 		h1 {
 			font-family: 'Staatliches', sans-serif;
@@ -46,6 +53,29 @@ import svgindex from '../assets/Fast-Internet.svg';
 			width: 70%;
 		}
 	}
+
+	@media screen and (min-width: 636px) { 
+		.content {
+			width: 60%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		
+        #title, .fullImage {
+            width: 50%;
+        }
+
+		#title {
+			justify-content: center;
+			align-items: center;
+
+			h1 {
+				font-size: 4em;
+			}
+		 }
+
+	 }
 
 
 </style>

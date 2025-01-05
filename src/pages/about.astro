@@ -10,24 +10,28 @@ import profilePicture from "../assets/profile_picture.avif";
       <Image src={profilePicture} alt="Pierre Dugast" id="face" />
       <figcaption>Fig 1. It's me!</figcaption>
     </figure>
-    <h1>Who ?</h1>
-    <p>Hi, I'm Pierre, a freelance web developer based in Paris.</p>
-    <p>
-      I specialize in building websites and web applications using modern
-      technologies like React, Vue, and Astro.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac sem arcu.
-      Cras id turpis non dui tempus eleifend eu sed arcu. Vivamus eget ex ac sem
-      pretium lacinia. Sed lacinia laoreet neque ut accumsan. Cras tincidunt
-      lacus vel tristique dapibus. Nunc tincidunt tempor ante, in imperdiet
-      sapien mattis eu. Aliquam egestas ipsum non neque vehicula, vel rhoncus
-      nulla auctor. Duis ultrices nisi ac tortor finibus tincidunt. Orci varius
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Morbi mattis et ipsum vitae eleifend. Suspendisse tempor malesuada dui, in
-      imperdiet sapien convallis ac. Morbi in suscipit arcu, at mollis risus.
-      Nullam posuere ultrices elementum.
-    </p>
+
+    <div class="text">
+      <h1>Who ?</h1>
+      <p>Hi, I'm Pierre, a freelance web developer based in Paris.</p>
+      <p>
+        I specialize in building websites and web applications using modern
+        technologies like React, Vue, and Astro.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac sem arcu.
+        Cras id turpis non dui tempus eleifend eu sed arcu. Vivamus eget ex ac sem
+        pretium lacinia. Sed lacinia laoreet neque ut accumsan. Cras tincidunt
+        lacus vel tristique dapibus. Nunc tincidunt tempor ante, in imperdiet
+        sapien mattis eu. Aliquam egestas ipsum non neque vehicula, vel rhoncus
+        nulla auctor. Duis ultrices nisi ac tortor finibus tincidunt. Orci varius
+        natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Morbi mattis et ipsum vitae eleifend. Suspendisse tempor malesuada dui, in
+        imperdiet sapien convallis ac. Morbi in suscipit arcu, at mollis risus.
+        Nullam posuere ultrices elementum.
+      </p>
+    </div>
+    
   </div>
 </Layout>
 
@@ -40,6 +44,8 @@ import profilePicture from "../assets/profile_picture.avif";
     width: 90%;
     height: auto;
     border-radius: 50%;
+
+
   }
 
   figcaption {
@@ -48,5 +54,24 @@ import profilePicture from "../assets/profile_picture.avif";
     font-weight: 100;
     font-size: 0.8em;
     text-align: center;
+  }
+
+
+  @media screen and (min-width: 636px) {
+      
+    .content {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+    figure {
+      width: 30%;
+    }
+
+    .text {
+      width: 70%;
+    }
   }
 </style>
