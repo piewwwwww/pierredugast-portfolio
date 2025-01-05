@@ -1,16 +1,43 @@
 ---
+import '@fontsource/staatliches';
+import '@fontsource/roboto';
 ---
 
 <footer>
-    <p>Made by a human, with love, from SOMEWHERE IN AUSTRALIA.</p>
+    <p class="madeBy">Made by a human, with love, from SOMEWHERE IN AUSTRALIA.</p>
 
-    <p>
+    <p class="copyright">
         All Rights Reserved.
-        Copyright © Matthew Richards 2024.
+        Copyright © Pierre Dugast 2024.
         This website does not track you.
     </p>
-
-    <p>Licence: CC BY-NC-SA 4.0</p>
-    <p>Privacy & GDPR</p>
+    
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"><p class="licence">Licence: CC BY-NC-SA 4.0</p></a>
+    <a href="/privacy"><p class="privacy">Privacy & GDPR</p></a>
 
 </footer>
+
+<style>
+
+    footer {
+        width: 100%;
+        margin-top: 5em;
+        padding:  0.5em 1.5em;
+
+        background-color: black;
+        color: white;
+
+        a {
+            color: white;
+        }
+    }
+    .madeBy {
+        text-transform: uppercase;
+        font-family: 'Staatliches', sans-serif;
+    }
+
+    .copyright, .licence, .privacy {
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+    }
+</style>

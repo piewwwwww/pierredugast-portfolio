@@ -6,12 +6,46 @@ import { Image } from 'astro:assets';
 import svgindex from '../assets/Fast-Internet.svg';
 
 ---
-
+<!-- TODO compléter title -->
 <Layout>
-	<div id="title">
-		<h1>Hi, I'm Pierre</h1>
+	<div id="title" class="content">
+		<h1>Hi, <br/> I'm Pierre</h1>
 		<p>Freelance Web Developper</p>
 		<button>Let's work together !</button>
 	</div>
-	<Image src={svgindex} alt="Fast Internet" />
+	<Image src={svgindex} alt="Fast Internet" class="fullImage" />
 </Layout>
+
+<style>
+	.fullImage {
+		display: block;
+        margin: 0 auto;
+		width: 90%;
+		height: auto;
+	}
+
+	#title {
+		background-color: #e5e5e5;
+		margin-top: 1em;
+		padding: 1em 2em;
+		display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align children to the left */
+        text-align: left;
+
+		h1 {
+			font-family: 'Staatliches', sans-serif;
+		}
+
+		p {
+			margin-top: 0;
+			margin-bottom: 4em;
+		}
+
+		button {
+			width: 70%;
+		}
+	}
+
+
+</style>

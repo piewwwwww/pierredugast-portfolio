@@ -1,17 +1,68 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
+<!-- TODO make form working -->
+ <!-- TODO change texts a bit  -->
 <Layout pageTitle="Contact">
-    <h1>Get in touch</h1>
-    <div id="contactForm">
+    <div id="contactForm" class="content">
+        <h1>Get in touch</h1>
+        <p>If you'd like to reach out, I'd love to hear from you.
+
+            Feel free to send me a message using the contact form or alternatively drop me an  <a href="mailto:pierredugast1@gmail.Com">email</a>.</p>
         <form action="" method="POST">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" placeholder="e.g. John Doe" required />
             <label for="email">Email</label>
-            <input type="email" id="email" name="_replyto" required />
+            <input type="email" id="email" name="_replyto" placeholder="e.g. you@example.com" required />
             <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" placeholder="How I can help ?" required></textarea>
+            <div class="field_terms">
+                <input id="contact-form-field__terms" type="checkbox" name="agree_to_terms" required="">
+                <label for="contact-form-field__terms">
+                    I consent to the data entered into this form being processed by <a href="https://www.netlify.com/platform/core/forms/">Netlify Forms</a> and <a href="https://akismet.com/">Akismet</a> spam protection services.
+                </label>
+            </div>
             <button type="submit">Hit me up !</button>
         </form>
+        
     </div>
 </Layout>
+
+<style lang="scss">
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input, textarea, .field, button {
+        margin-bottom: 1em;
+    }
+
+    input, textarea {
+        border-radius: 5px;
+        border: 1px solid black;
+        min-height: 3em;
+        padding: 1em;
+    }
+
+    textarea {
+        min-height: 17em;
+    }
+
+    .field {
+        display: flex;
+        align-items: center;
+    }
+
+    .field_terms {
+
+        margin-bottom: 1em;
+        input {
+            all: default;
+            min-height: 0em;
+
+
+        }
+    }
+
+</style>

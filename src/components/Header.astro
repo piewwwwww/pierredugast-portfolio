@@ -5,7 +5,24 @@ import pierreDugastLogo from '../assets/pierre_dugast_logo.png';
 ---
 
 <header>
-
-    <Image src={pierreDugastLogo} alt="Pierre Dugast Logo" />
+    <a href="/">
+        <Image src={pierreDugastLogo} alt="Pierre Dugast Logo" id="logo" />
+    </a>
     <Navigation />
 </header>
+
+<style>
+    header {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1em;
+    }
+
+    #logo {
+        width: 3em;
+        height: auto;
+        margin-right: 0.5em;
+    }
+</style>
