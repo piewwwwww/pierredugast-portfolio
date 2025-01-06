@@ -93,6 +93,7 @@ button {
   font-family: "Staatliches", sans-serif;
   padding: 0.5em 0em;
   width: 100%;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 636px) {

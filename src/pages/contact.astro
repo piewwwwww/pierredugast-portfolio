@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 <!-- TODO make form working -->
  <!-- TODO change texts a bit  -->
-  <!-- TODO make consent mandatory -->
+
    <!-- TODO page ou js formulaire validé -->
 <Layout pageTitle="Contact">
     <div id="contactForm" class="content">
@@ -11,7 +11,12 @@ import Layout from "../layouts/Layout.astro";
         <p>If you'd like to reach out, I'd love to hear from you.
 
             Feel free to send me a message using the contact form or alternatively drop me an  <a href="mailto:pierredugast1@gmail.Com">email</a>.</p>
-        <form name="contact" netlify>
+        <form name="contact" netlify netlify-honeypot="bot-field">  
+            <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
             <input type="hidden" name="form-name" value="contact" />
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="e.g. John Doe" required />
