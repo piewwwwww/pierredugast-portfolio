@@ -48,7 +48,9 @@ a {
   text-align: right;
 }
 
+
 .nav-links a {
+  display: inline-block;
   color: black;
   font-family: "Roboto", sans-serif;
   /* font-family: 'Staatliches', sans-serif; */
@@ -64,40 +66,13 @@ a {
 
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  display: block;
-  bottom: 4px;
-  left: 0;
-  background: currentColor;
-  background-color: black;
-  transition: width 0.3s ease;
 
-  
-}
-
-.nav-links a:hover::after,
-.nav-links a:focus::after {
-    width: 100%;
-}
 
 .nav-links a[href][aria-current="page"] {
   text-decoration: underline;
 }
 
-.nav-links a[href][aria-current="page"]::after {
-  width: 100%; /* Ensure the underline is visible */
-  height: 1px; /* Thicker underline for the current page */
-}
 
-.nav-links a:hover,
-.nav-links a:focus {
-  /* background-color: #e5e5e5; */
-
-}
 
 .nav-links a:visited {
   color: black;
@@ -132,7 +107,44 @@ button {
   .nav-links a {
     display: inline-block;
     margin: 15px 20px;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    /* font-family: 'Staatliches', sans-serif; */
+    text-align: center;
+   
+    margin-left: 0.5em;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  
+    position: relative;
+  
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    display: block;
+    bottom: 4px;
+    left: 0;
+    background: currentColor;
+    background-color: black;
+    transition: width 0.3s ease;
+  
+    
+  }
+  
+  .nav-links a:hover::after,
+  .nav-links a:focus::after {
+      width: 100%;
+  }
 
+  .nav-links a[href][aria-current="page"]::after {
+    width: 100%; /* Ensure the underline is visible */
+    height: 1px; /* Thicker underline for the current page */
   }
 
   .hamburger {
