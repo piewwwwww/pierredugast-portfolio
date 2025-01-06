@@ -9,7 +9,8 @@ import Layout from "../layouts/Layout.astro";
         <p>If you'd like to reach out, I'd love to hear from you.
 
             Feel free to send me a message using the contact form or alternatively drop me an  <a href="mailto:pierredugast1@gmail.Com">email</a>.</p>
-        <form action="" method="POST">
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="e.g. John Doe" required />
             <label for="email">Email</label>
@@ -24,7 +25,6 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <button type="submit">Hit me up !</button>
         </form>
-        
     </div>
 </Layout>
 
@@ -55,21 +55,16 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .field_terms {
-
         margin-bottom: 1em;
         input {
             all: default;
             min-height: 0em;
-
-
         }
     }
 
     @media screen and (min-width: 636px) {
-      
-      .content {
-          width: 60%;
-      }
+        .content {
+            width: 60%;
+        }
     }
-
 </style>
