@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import profilePicture from "../assets/face.jpg";
 ---
-<!-- TODO content + photo -->
+
 <Layout pageTitle="About">
   <div class="content">
     <figure>
@@ -12,32 +12,53 @@ import profilePicture from "../assets/face.jpg";
     </figure>
 
     <div class="text">
-      <h1>Who ?</h1>
-      <p>Hi, I'm Pierre, a freelance web developer based in Paris.</p>
+      <h1>Who am I?</h1>
+      <p>Hi, I'm Pierre, a freelance web developer currently traveling across Australia.</p>
       <p>
-        I specialize in building websites and web applications using modern
+        I'm a full-stack web developer with a focus on frontend development. I enjoy building websites and web applications using modern
         technologies like React, Vue, and Astro.
       </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac sem arcu.
-        Cras id turpis non dui tempus eleifend eu sed arcu. Vivamus eget ex ac sem
-        pretium lacinia. Sed lacinia laoreet neque ut accumsan. Cras tincidunt
-        lacus vel tristique dapibus. Nunc tincidunt tempor ante, in imperdiet
-        sapien mattis eu. Aliquam egestas ipsum non neque vehicula, vel rhoncus
-        nulla auctor. Duis ultrices nisi ac tortor finibus tincidunt. Orci varius
-        natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        Morbi mattis et ipsum vitae eleifend. Suspendisse tempor malesuada dui, in
-        imperdiet sapien convallis ac. Morbi in suscipit arcu, at mollis risus.
-        Nullam posuere ultrices elementum.
+      <h2>My Developer Story</h2>
+      <p>Since I was 12 years old, I have been interested in computers, coding, and creating my first websites.
+        I pursued engineering studies in network, telecom, and computer science. I did an apprenticeship in a telecom company but 
+        quickly realized that I was most passionate about projects that involved programming tasks.
+        <br>
+        I then focused more on web development. I worked in a web agency in France for 2 years as a full-stack developer.
+        I mainly worked on PHP framework-related projects, APIs, but also on some React and Vue projects.
+       <br>
+        Now, I'm traveling in Australia and launching myself as a freelance web developer.
+        You can find out more about me on <a href="https://www.linkedin.com/in/pierre-dugast-1b3160115/">LinkedIn</a>.
+      </p>
+
+      <h2>Primary Skillset:</h2>
+      <ul class="skills">
+        <li>Web Platform (HTML, CSS, JavaScript, DOM & Web APIs)</li>
+        <li>PHP Frameworks: CakePHP, Symfony</li>
+        <li>React</li>
+        <li>Vue</li>
+        <li>Astro</li>
+      </ul>
+      <h2>Other Skills:</h2>
+      <ul class="skills">
+        <li>DJing & Audio Production</li>
+        <li>Baking at home with sourdough</li>
+        <li>Home server management</li>
+      </ul>
+
+      <h2>About This Site:</h2>
+      <p>This site was built by myself using the Astro framework. It is hosted on Netlify.
+        Illustrations are from the <a href="https://notioly.com/">Notioly</a> pack by the talented <a href="https://bio.link/maryamato">Mary Mato</a>.
       </p>
     </div>
     
   </div>
 </Layout>
 
-<style>
+<style lang="scss">
 
-
+  #text {
+    text-align: justify;
+  }
   #face {
     display: block;
     margin: 0 auto;
@@ -54,6 +75,23 @@ import profilePicture from "../assets/face.jpg";
     font-weight: 100;
     font-size: 0.8em;
     text-align: center;
+  }
+
+  .skills {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 2em));
+    gap: 0.2em;
+  padding: 0;
+    width: 100%;
+    li {
+      max-width: 10em;
+      background-color: #f3f2f2;
+      padding: 0.5em;
+      margin: 0.5em;
+      margin-left: 0;
+      border-radius: 5px;
+    }
   }
 
 

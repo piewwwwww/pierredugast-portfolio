@@ -26,10 +26,16 @@ body {
   box-sizing: border-box;
 }
 
+h1, h2 {
+  font-family: 'Staatliches', sans-serif ;
+}
+
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
+
 }
+
 
 a {
   color: black;
@@ -41,6 +47,7 @@ a {
 }
 
 /* TODO fix menu underline */
+/* TODO make dar light auto theme */
 .nav-links {
   width: 100%;
   margin: 0;
@@ -82,7 +89,7 @@ a {
   display: unset;
 }
 
-button {
+button, .button {
   all: unset;
   align-self: center;
   margin-bottom: 1em;
