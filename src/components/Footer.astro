@@ -1,6 +1,8 @@
 ---
 import '@fontsource/staatliches';
 import '@fontsource/roboto';
+import { date } from 'astro:schema';
+const currentYear = new Date().getFullYear();
 ---
 
 <footer>
@@ -8,7 +10,7 @@ import '@fontsource/roboto';
 
     <p class="copyright">
         All Rights Reserved.
-        Copyright © Pierre Dugast 2024.
+        Copyright © Pierre Dugast {currentYear}.
         This website does not track you.
     </p>
     
